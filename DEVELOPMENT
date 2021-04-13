@@ -1,0 +1,24 @@
+Development Log- apraba3, sharma68, sohinir2
+
+(11/22-11/28):
+We have discussed what progress we want to make before the mid-project check-in meeting.
+By that time, we will try to set up our classes (i.e. an edge class, etc), implement a function to parse through our
+CSV files or maybe use a parser library, create a MakeFile, and figure out how to calculate the distance between
+two airports using the latitude and longitude variables from the airports.dat file. We are currently figuring out how to
+set up our graphs with the appropriate vertices and edges.
+
+(11/29-12/5):
+By now, we have finished setting up our classes in our Visual Studio Code environment.
+parse_data.cpp contains a few functions that help us parse through routes.dat and airports.dat, to obtain the data we
+need- namely, airport IATAs for our sources and destinations, latitudes, and longitudes. This class also contains a
+distance function that finds the distance between two points. We have created a constructor in airport_paths.cpp that
+uses this data to add vertices and edges to the graph, and plan to refine this as it is not perfect yet.
+
+(12/6-12/11):
+Our parse_data.cpp class successfully extracts the information we need for our graph from airports.dat and routes.dat.
+This information is written into a few different data structures (most of them being maps), for efficiency in looking up
+keys and their corresponding values. From there, we implemented a constructor in our airports_paths.cpp to insert vertices
+and edges into our graph. Once the program is run, it requests user input for source and destination vertices- these are
+applied to the Dijkstra's algorithm in our dijkstra.cpp class to find the shortest path between the two. In the end, a
+visual map titled "shortest_path.png" is output that shows all of the airports from our .csv files on a world map, and
+the coordinates corresponding to the shortest path are colored to aid visibility.
